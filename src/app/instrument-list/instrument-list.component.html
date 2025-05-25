@@ -1,0 +1,40 @@
+<h3>Lista de instrumentos</h3>
+
+<table class="table text-center text-center align-middle">
+    <thead>
+        <tr>
+            <th>Image</th>
+            <th>Name</th>
+            <th>Brand</th>
+            <th>Stock</th>
+            <th>Price</th>
+            <th>Compra</th>
+        </tr>
+    </thead>
+    <tbody>
+        @for (instrument of instruments; track instrument.name) {
+            <tr [ngClass]="{'clearance': instrument.clearance}">
+                <td><img class="img-thumbnail" [src]="instrument.img" width="150" [alt]="instrument.name"></td>
+                <td>{{instrument.name}}</td>
+                <td>{{instrument.brand}}</td>
+                <td>{{instrument.stock}}</td>
+                <td>{{instrument.price | currency}}</td>
+                <td>
+                    <div class="input-group input-group-sm">
+                        <button class="btn btn-outline-secondary" type="button" (click)="downQuantity(instrument)">-</button>
+                        <input
+                            type="number"
+                            class="form-control form-control-sm quantity-input"
+                            [(ngModel)]="instrument.quantity"
+                        >
+                        <button class="btn btn-outline-secondary" type="button" (click)="upQuantity(instrument)">+</button>
+                    </div>
+            </tr>
+        } @empty {
+            <tr>
+                <td colspan="4">No hay instrumentos para mostrar.</td>
+            </tr>
+        }
+    </tbody>
+</table>
+

@@ -3,16 +3,25 @@ import { BrowserModule, provideClientHydration, withEventReplay } from '@angular
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { SheetMusicListComponent } from './sheet-music-list/sheet-music-list.component';
+import { InstrumentListComponent } from './instrument-list/instrument-list.component';
+
+import { FormsModule } from '@angular/forms';
+import { MoodAboutComponent } from './mood-about/mood-about.component';
+import { MoodInstrumentsComponent } from './mood-instruments/mood-instruments.component';
+import { CartComponent } from './cart/cart.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SheetMusicListComponent
+    InstrumentListComponent,
+    MoodAboutComponent,
+    MoodInstrumentsComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [
     provideClientHydration(withEventReplay())
