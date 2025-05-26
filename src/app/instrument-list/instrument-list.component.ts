@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Instrument } from './Instrument';
+import { InstrumentCartService } from '../instrument-cart.service';
 
 @Component({
   selector: 'app-instrument-list',
@@ -8,7 +9,16 @@ import { Instrument } from './Instrument';
   styleUrl: './instrument-list.component.scss'
 })
 export class InstrumentListComponent {
-instruments: Instrument[] = [{
+
+  constructor(private cart: InstrumentCartService){}
+
+  addToCart(instrument: Instrument): void {
+    this.cart.addToCart(instrument);
+    instrument.stock -= instrument.quantity;
+    instrument.quantity = 0;
+  }
+
+  instruments: Instrument[] = [{
     name: 'Piano',
     brand: 'Casio',
     price: 5,
@@ -18,7 +28,7 @@ instruments: Instrument[] = [{
     quantity: 0,
   },
   {
-    name: 'Piano',
+    name: 'Piano 2',
     brand: 'Casio',
     price: 5,
     img: 'assets/img/partitura.jpg',
@@ -27,24 +37,14 @@ instruments: Instrument[] = [{
     quantity: 0,
   },
   {
-    name: 'Piano',
+    name: 'Piano 3',
     brand: 'Casio',
     price: 5,
     img: 'assets/img/partitura.jpg',
-    stock: 15,
+    stock: 0,
     clearance: false,
     quantity: 0,
   }];
 
-  upQuantity(instrument: Instrument): void {
-    if (instrument.quantity < instrument.stock) {
-      instrument.quantity++;
-    }  
-  }
-
-  downQuantity(instrument: Instrument): void {
-    if (instrument.quantity > 0) {
-      instrument.quantity--;
-    }  
-  }
+  
 }

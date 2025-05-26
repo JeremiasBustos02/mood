@@ -9,6 +9,7 @@ import { FormsModule } from '@angular/forms';
 import { MoodAboutComponent } from './mood-about/mood-about.component';
 import { MoodInstrumentsComponent } from './mood-instruments/mood-instruments.component';
 import { CartComponent } from './cart/cart.component';
+import { InputIntegerComponent } from './input-integer/input-integer.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { CartComponent } from './cart/cart.component';
     InstrumentListComponent,
     MoodAboutComponent,
     MoodInstrumentsComponent,
-    CartComponent
+    CartComponent,
+    InputIntegerComponent
   ],
   imports: [
     BrowserModule,

@@ -13,28 +13,28 @@
     </thead>
     <tbody>
         @for (instrument of instruments; track instrument.name) {
-            <tr [ngClass]="{'clearance': instrument.clearance}">
-                <td><img class="img-thumbnail" [src]="instrument.img" width="150" [alt]="instrument.name"></td>
-                <td>{{instrument.name}}</td>
-                <td>{{instrument.brand}}</td>
-                <td>{{instrument.stock}}</td>
-                <td>{{instrument.price | currency}}</td>
-                <td>
-                    <div class="input-group input-group-sm">
-                        <button class="btn btn-outline-secondary" type="button" (click)="downQuantity(instrument)">-</button>
-                        <input
-                            type="number"
-                            class="form-control form-control-sm quantity-input"
-                            [(ngModel)]="instrument.quantity"
-                        >
-                        <button class="btn btn-outline-secondary" type="button" (click)="upQuantity(instrument)">+</button>
-                    </div>
-            </tr>
+        <tr [ngClass]="{'clearance': instrument.clearance}">
+            <td><img class="img-thumbnail" [src]="instrument.img" width="150" [alt]="instrument.name"></td>
+            <td>{{instrument.name}}</td>
+            <td>{{instrument.brand}}</td>
+            <td>{{instrument.stock}}</td>
+            <td>{{instrument.price | currency}}</td>
+            <td>
+                @if (instrument.stock > 0) {
+                    <app-input-integer 
+                        [(quantity)]="instrument.quantity"
+                        [max]="instrument.stock">
+                    </app-input-integer>
+                    <button class="btn btn-dark" (click)="addToCart(instrument)">Comprar</button>
+                } @else if (instrument.stock == 0) {
+                <span class="badge bg-warning text-dark">Sin stock</span>
+                }
+            </td>
+        </tr>
         } @empty {
-            <tr>
-                <td colspan="4">No hay instrumentos para mostrar.</td>
-            </tr>
+        <tr>
+            <td colspan="4">No hay instrumentos para mostrar.</td>
+        </tr>
         }
     </tbody>
 </table>
-
