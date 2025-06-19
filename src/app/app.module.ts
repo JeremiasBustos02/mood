@@ -5,11 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { InstrumentListComponent } from './instrument-list/instrument-list.component';
 
+import { HttpClientModule } from '@angular/common/http';
+
 import { FormsModule } from '@angular/forms';
 import { MoodAboutComponent } from './mood-about/mood-about.component';
 import { MoodInstrumentsComponent } from './mood-instruments/mood-instruments.component';
 import { CartComponent } from './cart/cart.component';
 import { InputIntegerComponent } from './input-integer/input-integer.component';
+
 
 @NgModule({
   declarations: [
@@ -18,12 +21,13 @@ import { InputIntegerComponent } from './input-integer/input-integer.component';
     MoodAboutComponent,
     MoodInstrumentsComponent,
     CartComponent,
-    InputIntegerComponent
+    InputIntegerComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule,
   ],
   providers: [
     provideClientHydration(withEventReplay())
