@@ -1,8 +1,8 @@
 import { Component, EventEmitter, Output } from '@angular/core';
-import { InstrumentCartService } from '../instrument-cart.service';
+import { InstrumentCartService } from '../../../services/instrument-cart.service';
 import { Instrument } from '../instrument-list/Instrument';
 import { Observable, take } from 'rxjs';
-import { InstrumentDataService } from '../instrument-data.service';
+import { InstrumentDataService } from '../../../services/instrument-data.service';
 
 @Component({
   selector: 'app-cart',

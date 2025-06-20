@@ -3,17 +3,17 @@ import { BrowserModule, provideClientHydration, withEventReplay } from '@angular
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { InstrumentListComponent } from './instrument-list/instrument-list.component';
+import { InstrumentListComponent } from './components/instruments-components/instrument-list/instrument-list.component';
 
 import { HttpClientModule } from '@angular/common/http';
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { MoodAboutComponent } from './mood-about/mood-about.component';
-import { MoodInstrumentsComponent } from './mood-instruments/mood-instruments.component';
-import { CartComponent } from './cart/cart.component';
-import { InputIntegerComponent } from './input-integer/input-integer.component';
-import { AboutFormComponent } from './about-form/about-form.component';
-import { AboutCommentListComponent } from './about-comment-list/about-comment-list.component';
+import { MoodAboutComponent } from './components/about-component/mood-about/mood-about.component';
+import { MoodInstrumentsComponent } from './components/instruments-components/mood-instruments/mood-instruments.component';
+import { CartComponent } from './components/instruments-components/cart/cart.component';
+import { InputIntegerComponent } from './components/input-integer/input-integer.component';
+import { AboutFormComponent } from './components/about-component/about-form/about-form.component';
+import { AboutCommentListComponent } from './components/about-component/about-comment-list/about-comment-list.component';
 
 
 @NgModule({

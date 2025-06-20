@@ -1,5 +1,5 @@
 import { Component, Input, Output, EventEmitter, OnInit} from '@angular/core';
-import { Instrument } from '../instrument-list/Instrument';
+import { Instrument } from '../../components/instruments-components/instrument-list/Instrument';
 
 @Component({
   selector: 'app-input-integer',

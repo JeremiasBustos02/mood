@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { MoodInstrumentsComponent } from './mood-instruments/mood-instruments.component';
-import { MoodAboutComponent } from './mood-about/mood-about.component';
+import { MoodInstrumentsComponent } from './components/instruments-components/mood-instruments/mood-instruments.component';
+import { MoodAboutComponent } from './components/about-component/mood-about/mood-about.component';
 
 const routes: Routes = [
   {

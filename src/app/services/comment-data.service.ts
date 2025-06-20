@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Comment } from './about-comment-list/Comment';
+import { Comment } from '../components/about-component/about-comment-list/Comment';
 
 const URL = 'https://685479426a6ef0ed662f2f06.mockapi.io/mood/comments';
 

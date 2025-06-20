@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Instrument } from './instrument-list/Instrument';
+import { Instrument } from '../components/instruments-components/instrument-list/Instrument';
 import { BehaviorSubject } from 'rxjs';
 
 @Injectable({

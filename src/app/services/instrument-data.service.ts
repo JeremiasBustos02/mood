@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, tap } from 'rxjs';
-import { Instrument } from './instrument-list/Instrument';
+import { Instrument } from '../components/instruments-components/instrument-list/Instrument';
 
 const URL = 'https://685479426a6ef0ed662f2f06.mockapi.io/mood/instruments';
 

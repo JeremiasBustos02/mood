@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Instrument } from './Instrument';
-import { InstrumentCartService } from '../instrument-cart.service';
-import { InstrumentDataService } from '../instrument-data.service';
+import { InstrumentCartService } from '../../../services/instrument-cart.service';
+import { InstrumentDataService } from '../../../services/instrument-data.service';
 
 @Component({
   selector: 'app-instrument-list',

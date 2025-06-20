@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 import { EmailValidator, FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
-import { CommentDataService } from '../comment-data.service';
+import { CommentDataService } from '../../../services/comment-data.service';
 import { Comment } from '../about-comment-list/Comment';
 
 @Component({
