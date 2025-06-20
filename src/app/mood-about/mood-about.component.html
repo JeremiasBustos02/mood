@@ -1,1 +1,9 @@
-<p>mood-about works!</p>
+
+<div class="row">
+    <div class="col-6">
+        <app-about-form (commentAdded)="onCommentAdded()"></app-about-form>
+    </div>
+    <div class="col-6">
+        <app-about-comment-list #commentList></app-about-comment-list>
+    </div>
+</div>

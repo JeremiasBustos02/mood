@@ -13,7 +13,7 @@
     </thead>
     <tbody>
         @for (instrument of instruments; track instrument.name) {
-        <tr [ngClass]="{'clearance': instrument.clearance}">
+        <tr [ngClass]="{'clearance': instrument.clearance && instrument.stock > 0}">
             <td><img class="img-thumbnail" [src]="instrument.img" width="150" [alt]="instrument.name"></td>
             <td>{{instrument.name}}</td>
             <td>{{instrument.brand}}</td>
@@ -25,7 +25,7 @@
                         [(quantity)]="instrument.quantity"
                         [max]="instrument.stock">
                     </app-input-integer>
-                    <button class="btn btn-dark" (click)="addToCart(instrument)">Comprar</button>
+                    <button class="btn btn-dark" (click)="addToCart(instrument)">Añadir</button>
                 } @else if (instrument.stock == 0) {
                 <span class="badge bg-warning text-dark">Sin stock</span>
                 }

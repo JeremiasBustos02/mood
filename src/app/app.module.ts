@@ -7,11 +7,13 @@ import { InstrumentListComponent } from './instrument-list/instrument-list.compo
 
 import { HttpClientModule } from '@angular/common/http';
 
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MoodAboutComponent } from './mood-about/mood-about.component';
 import { MoodInstrumentsComponent } from './mood-instruments/mood-instruments.component';
 import { CartComponent } from './cart/cart.component';
 import { InputIntegerComponent } from './input-integer/input-integer.component';
+import { AboutFormComponent } from './about-form/about-form.component';
+import { AboutCommentListComponent } from './about-comment-list/about-comment-list.component';
 
 
 @NgModule({
@@ -22,12 +24,15 @@ import { InputIntegerComponent } from './input-integer/input-integer.component';
     MoodInstrumentsComponent,
     CartComponent,
     InputIntegerComponent,
+    AboutFormComponent,
+    AboutCommentListComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
+    ReactiveFormsModule,
   ],
   providers: [
     provideClientHydration(withEventReplay())

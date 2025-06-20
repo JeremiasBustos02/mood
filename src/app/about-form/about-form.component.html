@@ -1,0 +1,24 @@
+<form [formGroup]="formAbout" class="container mt-4" (submit)="onSubmit()" >
+  <div class="mb-3">
+    <label for="name" class="form-label">Nombre</label>
+    <input type="text" class="form-control" id="name" placeholder="Ingresa tu nombre" formControlName="name">
+  </div>
+
+  <div class="mb-3">
+    <label for="lastname" class="form-label">Apellido</label>
+    <input type="text" class="form-control" id="lastname" placeholder="Ingresa tu apellido" formControlName="lastname">
+  </div>
+
+  <div class="mb-3">
+    <label for="email" class="form-label">Email</label>
+    <input type="email" class="form-control" id="email" placeholder="ejemplo@correo.com" formControlName="email">
+  </div>
+
+  <div class="mb-3">
+    <label for="comment" class="form-label">Comentario</label>
+    <textarea class="form-control" id="comment" rows="3" placeholder="Deja tu comentario" formControlName="comment"></textarea>
+  </div>
+
+  <button [disabled]="formAbout.invalid" type="submit" class="btn btn-primary">Enviar</button>
+</form>
+

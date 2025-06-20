@@ -1,0 +1,15 @@
+<div class="container mt-4">
+  <h5>Comentarios enviados</h5>
+  <ul class="list-group">
+    <li class="list-group-item" *ngFor="let comment of comments">
+      <strong>{{ comment.name }} {{ comment.lastname }}</strong> 
+      <br>
+      <small class="text-muted">{{ comment.email }}</small>
+      <p class="mb-1">{{ comment.comment }}</p>
+    </li>
+  </ul>
+
+  <div *ngIf="comments.length === 0" class="alert alert-info mt-3">
+    Aún no hay comentarios enviados.
+  </div>
+</div>

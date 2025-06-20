@@ -22,4 +22,14 @@ export class InstrumentCartService {
     console.log(this._cartList);
     this.cartList.next(this._cartList);
   }
+
+  removeToCart(instrument: Instrument) {
+    this._cartList = this._cartList.filter(i => i.name !== instrument.name);
+    this.cartList.next(this._cartList);
+  }
+
+  clearCart() {
+    this._cartList = [];
+    this.cartList.next(this._cartList);
+  }
 }

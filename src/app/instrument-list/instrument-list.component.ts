@@ -28,7 +28,12 @@ export class InstrumentListComponent implements OnInit {
     instrument.quantity = 0;
   }
 
-  
+  restoreStock(removedInstrument: Instrument) {
+  const product = this.instruments.find(i => i.name === removedInstrument.name);
+  if (product) {
+    product.stock += removedInstrument.quantity;
+  }
+}
 
   
 }

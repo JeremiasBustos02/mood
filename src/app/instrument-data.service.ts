@@ -18,4 +18,8 @@ export class InstrumentDataService {
                 tap( (instruments: Instrument[]) => instruments.forEach(instrument => instrument.quantity = 0))
               );
   }
+
+  public updateInstrumentStock(id: string, newStock: number): Observable<any> {
+    return this.http.put(`${URL}/${id}`, { stock: newStock });
+  }
 }
