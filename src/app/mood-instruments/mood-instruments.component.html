@@ -1,8 +1,8 @@
 <div class="row">
     <div class="col-8">
-        <app-instrument-list></app-instrument-list>
+        <app-instrument-list #instrumentList></app-instrument-list>
     </div>
     <div class="col-4">
-        <app-cart></app-cart>
+        <app-cart (itemRemoved)="onItemRemoved($event)"></app-cart>
     </div>
 </div>

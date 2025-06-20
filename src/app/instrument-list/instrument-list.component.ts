@@ -29,10 +29,10 @@ export class InstrumentListComponent implements OnInit {
   }
 
   restoreStock(removedInstrument: Instrument) {
-  const product = this.instruments.find(i => i.name === removedInstrument.name);
-  if (product) {
-    product.stock += removedInstrument.quantity;
-  }
+    const product = this.instruments.find(i => i.name === removedInstrument.name);
+    if (product) {
+      product.stock += removedInstrument.quantity;
+    }
 }
 
   
