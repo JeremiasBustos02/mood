@@ -14,6 +14,7 @@ import { CartComponent } from './components/instruments-components/cart/cart.com
 import { InputIntegerComponent } from './components/input-integer/input-integer.component';
 import { AboutFormComponent } from './components/about-component/about-form/about-form.component';
 import { AboutCommentListComponent } from './components/about-component/about-comment-list/about-comment-list.component';
+import { HomeComponent } from './components/home-components/home.component';
 
 
 @NgModule({
@@ -26,6 +27,7 @@ import { AboutCommentListComponent } from './components/about-component/about-co
     InputIntegerComponent,
     AboutFormComponent,
     AboutCommentListComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
