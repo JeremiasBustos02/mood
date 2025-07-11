@@ -1,5 +1,5 @@
 <h3>Lista de instrumentos</h3>
-<div class="table-responsive">
+<div class="table-responsive-sm">
     <table class="table text-center align-middle">
         <thead>
             <tr>
@@ -14,7 +14,7 @@
         <tbody>
             @for (instrument of instruments; track instrument.name) {
             <tr [ngClass]="{'nostock': instrument.stock == 0}">
-                <td><img class="img-thumbnail" [src]="instrument.img" width="150" [alt]="instrument.name"></td>
+                <td><img class="img-thumbnail" [src]="instrument.img" [alt]="instrument.name"></td>
                 <td>{{instrument.name}}</td>
                 <td>{{instrument.brand}}</td>
                 <td>{{instrument.stock}}</td>

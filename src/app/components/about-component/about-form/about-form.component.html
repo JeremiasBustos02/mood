@@ -1,3 +1,5 @@
+<h3>Deja tu comentario!</h3>
+
 <form [formGroup]="formAbout" class="container mt-4" (submit)="onSubmit()" >
   <div class="mb-3">
     <label for="name" class="form-label">Nombre</label>
@@ -19,6 +21,6 @@
     <textarea class="form-control" id="comment" rows="3" placeholder="Deja tu comentario" formControlName="comment"></textarea>
   </div>
 
-  <button [disabled]="formAbout.invalid" type="submit" class="btn btn-primary">Enviar</button>
+  <button [disabled]="formAbout.invalid" type="submit" class="btn btn-outline-dark px-4 py-2 rounded-pill">Enviar</button>
 </form>
 
