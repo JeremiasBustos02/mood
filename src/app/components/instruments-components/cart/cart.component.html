@@ -1,10 +1,11 @@
 <h3>Carrito de compras</h3>
-<ul>
-  <li *ngFor="let instrument of cartList$ | async">
-    {{instrument.name}}: {{instrument.quantity}}
-    @if (instrument.quantity > 0) {
-      <button class="btn btn-dark" (click)="removeToCart(instrument)">Quitar</button>
-    }
-  </li>
+<ul class="list-unstyled">
+  <ng-container *ngFor="let instrument of cartList$ | async">
+    <!-- Solo renderiza el <li> si quantity > 0 -->
+    <li *ngIf="instrument.quantity > 0">
+      {{ instrument.name }} ({{ instrument.brand }}): {{ instrument.quantity }}
+      <button class="btn btn-dark btn-sm ms-2" (click)="removeToCart(instrument)">Quitar</button>
+    </li>
+  </ng-container>
 </ul>
 <button class="btn btn-success mt-3" (click)="buy()">Comprar</button>
