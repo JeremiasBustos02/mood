@@ -1,59 +1,68 @@
-# Mood
+# Mood 🎹
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.11.
+Mood es una aplicación web de e-commerce de instrumentos musicales, desarrollada con Angular como práctica académica de desarrollo front-end. Utiliza servicios externos (MockAPI, PostImages) para simular una tienda real.
 
-## Development server
+## 🚀 Funcionalidades
 
-To start a local development server, run:
+- ✅ Agregar instrumentos al carrito.
+- ✅ Eliminar instrumentos del carrito.
+- ✅ Seleccionar la cantidad deseada.
+- ✅ Sección de contacto con formulario para dejar comentarios.
+- ✅ Página de inicio minimalista con acceso directo a la tienda.
+- ✅ Instrumentos y comentarios cargados desde una API externa (MockAPI).
 
-```bash
-ng serve
-```
+## 📂 Estructura del proyecto
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+- src/ Código fuente de Angular, módulos Angular y ruteo.
+  - app/
+    - components/ — Componentes
+    - services/ — Servicios
 
-## Code scaffolding
+## ⚙️ Instalación local
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+1. Clonar el repositorio:
+  ```bash
+  git clone https://github.com/JeremiasBustos02/mood.git
+  cd mood
+  ```
+2. Instalar dependencias:
+  ```bash
+  npm install
+  ```
+3. Ejecutar el servidor:
+  ```bash
+  ng serve
+  ```
+4. Abrir el navegador:
+  ```bash
+  http://localhost:4200
+  ```
 
-```bash
-ng generate component component-name
-```
+## 🌐 Servicios externos utilizados.
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+ - MockApi Para los instrumentos y comentarios.
+ - PostImages Para alojar las imagenes de los instrumentos.
 
-```bash
-ng generate --help
-```
+### 📦 Links y endpoints
 
-## Building
+- 🏠 **/home**: Página principal con diseño minimalista y acceso directo a la tienda.
 
-To build the project run:
+- 🎸 **/instruments**:  
+  Recurso: [`https://685479426a6ef0ed662f2f06.mockapi.io/mood/instruments`](https://685479426a6ef0ed662f2f06.mockapi.io/mood/instruments)
 
-```bash
-ng build
-```
+- 💬 **/about**:  
+  Recurso: [`https://685479426a6ef0ed662f2f06.mockapi.io/mood/comments`](https://685479426a6ef0ed662f2f06.mockapi.io/mood/comments)
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+- 🖼️ **Galería de imágenes (PostImages)**:  
+  Recurso: [`https://postimg.cc/gallery/tT84Gxj`](https://postimg.cc/gallery/tT84Gxj)
 
-## Running unit tests
+## 🧠 Posibles mejoras
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+- Autenticación de usuarios.
+- Página de detalle por instrumento.
+- Paginado o filtrado por categoría.
+- Responsive design mejorado.
 
-```bash
-ng test
-```
+## 👤 Autor
 
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Jeremías Bustos — [@JeremiasBustos02](https://github.com/JeremiasBustos02) - jeremias.e.bustos@gmail.com
