@@ -65,4 +65,7 @@ Mood es una aplicación web de e-commerce de instrumentos musicales, desarrollad
 
 ## 👤 Autor
 
-Jeremías Bustos — [@JeremiasBustos02](https://github.com/JeremiasBustos02) - jeremias.e.bustos@gmail.com
+Jeremías Bustos — [@JeremiasBustos02](https://github.com/JeremiasBustos02)
+- Email: jeremias.e.bustos@gmail.com
+- DNI: 44267020
+- Sede: Tandil
